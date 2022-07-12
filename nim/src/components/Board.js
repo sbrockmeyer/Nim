@@ -2,7 +2,9 @@ import React from 'react'
 
 function Board() {
   return (
-    <div>Board</div>
+    <div>Board
+        <button onClick={toggleGameRunning}>back to menu</button>
+    </div>
   )
 }
 
