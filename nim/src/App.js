@@ -11,9 +11,7 @@ function App() {
   const [player2Name, setPlayer2Name] = useState('');
   const [gameRunning, setGameRumming] = useState(false);
 
-  const toggleGameRunning = () => {
-    setGameRumming(current => !current);
-  };
+  
 
   const easyGame = () => {
 
