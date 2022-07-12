@@ -1,3 +1,4 @@
+var logicTurn = false;
 
 function easyCPUTurn(){
     //Make a random num between 1 and 3
@@ -9,6 +10,7 @@ function easyCPUTurn(){
 //Determine if it is the correct turn to use logic
 function medCPUTurn(playerGuess, useLogic){
     if(useLogic){
+        logicTurn = false;
         switch (playerGuess){
             case 1:
                 return 3;
@@ -19,6 +21,7 @@ function medCPUTurn(playerGuess, useLogic){
         }
     }
     else{
+        logicTurn = true;
         return easyCPUTurn();
     }
 }
