@@ -3,10 +3,6 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 function Home() {
   return (
-<<<<<<< Updated upstream
-    <div>Home
-      <button onClick={toggleGameRunning}>play </button>
-=======
     <div>
       <h1>NIM</h1>
       <Dropdown>
@@ -20,7 +16,6 @@ function Home() {
         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
->>>>>>> Stashed changes
     </div>
   )
 }
