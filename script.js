@@ -1,5 +1,10 @@
 var logicTurn = false;
 
+//Player vs Player logic
+
+//Turn Logic
+
+
 function easyCPUTurn(){
     //Make a random num between 1 and 3
     var randNum = Math.floor(Math.random * 3) + 1;
