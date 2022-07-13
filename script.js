@@ -1,4 +1,10 @@
 var logicTurn = false;
+var playerGuess = 0;
+
+//Player vs Player logic
+
+//Turn Logic
+
 
 function easyCPUTurn(){
     //Make a random num between 1 and 3
