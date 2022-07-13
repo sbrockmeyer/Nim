@@ -3,8 +3,28 @@ var playerGuess = 0;
 var isCPUGame = false;
 
 //Player vs Player logic
-
 //Turn Logic
+function logicTurn(){
+    var playerTurn = 0;
+    //If playerTurn = 0;
+    if(playerTurn == 0){
+        //Player 1 Turn
+        playerTurn = 1;
+    }
+    //If playerTurn = 1;
+    else{
+        //If isCPUGame run cpu turn;
+        if(isCPUGame){
+            //Do CPU Turn
+            //Switch for difficulty
+        }
+        else{
+            //else run player 2 turn;
+        }
+    }
+    
+
+}
 
 
 function easyCPUTurn(){
