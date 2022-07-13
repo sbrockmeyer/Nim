@@ -63,3 +63,8 @@ function hardCPUTurn(playerGuess){
             return 1;
     }
 }
+
+///pvp easy medium and hard
+//easy medium and hard gme piece display
+//pvp or pvc selection
+//win loss?
