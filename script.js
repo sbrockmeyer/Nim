@@ -1,5 +1,6 @@
 var logicTurn = false;
 var playerGuess = 0;
+var isCPUGame = false;
 
 //Player vs Player logic
 
