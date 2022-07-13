@@ -1,4 +1,5 @@
 var logicTurn = false;
+var playerGuess = 0;
 
 //Player vs Player logic
 
