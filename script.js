@@ -1,10 +1,11 @@
 var logicTurn = false;
 var playerGuess = 0;
 var isCPUGame = false;
+var difficulty = "Easy";
 
 //Player vs Player logic
 //Turn Logic
-function logicTurn(difficulty){
+function turnLogic(){
     var playerTurn = 0;
     //If playerTurn = 0;
     if(playerTurn == 0){
@@ -13,6 +14,7 @@ function logicTurn(difficulty){
         //Remove PlayerGuess number of tokens
         //Update how many were removed notification
         playerTurn = 1;
+        logicTurn = false;
     }
     //If playerTurn = 1;
     else{
