@@ -1,7 +1,7 @@
 var logicTurn = false;
 var playerGuess = 0;
 var isCPUGame = false;
-var difficulty = "";
+var difficulty = "Easy";
 
 //Player vs Player logic
 //Turn Logic
