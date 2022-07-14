@@ -14,6 +14,7 @@ function logicTurn(){
         //Remove PlayerGuess number of tokens
         //Update how many were removed notification
         playerTurn = 1;
+        logicTurn = false;
     }
     //If playerTurn = 1;
     else{
