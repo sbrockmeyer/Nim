@@ -4,22 +4,43 @@ var isCPUGame = false;
 
 //Player vs Player logic
 //Turn Logic
-function logicTurn(){
+function logicTurn(difficulty){
     var playerTurn = 0;
     //If playerTurn = 0;
     if(playerTurn == 0){
+        //Update Player Turn Banner
         //Player 1 Turn
+        //Remove PlayerGuess number of tokens
+        //Update how many were removed notification
         playerTurn = 1;
     }
     //If playerTurn = 1;
     else{
+        //Update Player Turn Banner
         //If isCPUGame run cpu turn;
         if(isCPUGame){
             //Do CPU Turn
             //Switch for difficulty
+            playerTurn = 0;
+            switch(difficulty){
+                case "Easy":
+                    playerGuess = easyCPUTurn();
+                    break;
+                case "Medium":
+                    playerGuess = medCPUTurn(playerGuess, logicTurn);
+                    logicTurn = true;
+                    break;
+                case "Hard":
+                    playerGuess = hardCPUTurn(playerGuess);
+                    break;
+            }
+
         }
         else{
-            //else run player 2 turn;
+            //else Player 2 turn;
+            //Remove PlayerGuess number of tokens
+            //Update how many were removed notification
+            playerTurn = 0;
         }
     }
     
