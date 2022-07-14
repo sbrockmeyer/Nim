@@ -1,10 +1,11 @@
 var logicTurn = false;
 var playerGuess = 0;
 var isCPUGame = false;
+var difficulty = "";
 
 //Player vs Player logic
 //Turn Logic
-function logicTurn(difficulty){
+function logicTurn(){
     var playerTurn = 0;
     //If playerTurn = 0;
     if(playerTurn == 0){
