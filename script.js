@@ -5,7 +5,7 @@ var difficulty = "Easy";
 
 //Player vs Player logic
 //Turn Logic
-function logicTurn(){
+function turnLogic(){
     var playerTurn = 0;
     //If playerTurn = 0;
     if(playerTurn == 0){
