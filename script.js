@@ -1,7 +1,23 @@
+//This is only for use in the medium cpu turn
 var logicTurn = false;
+//This changes on user selection of number of pieces
 var playerGuess = 0;
+//This decides if a 2nd player(false) or the cpu(true) takes a turn
 var isCPUGame = false;
+//This changes the difficulty of the cpu (can be used for more)
 var difficulty = "Easy";
+
+//Use this for the onclick to change from a pvp to pvc game
+function gameOpponent(){
+    //This is hard coded but can be adjusted depending on what the front end looks like
+    isCPUGame = true;
+}
+
+//Use this for when the player chooses the number of pieces to remove
+//Can be changed to just pull the value of the text box or whatever element we use
+function playerPieceSelection(playerChoice){
+    playerGuess = playerChoice
+}
 
 //Player vs Player logic
 //Turn Logic
@@ -9,20 +25,19 @@ function turnLogic(){
     var playerTurn = 0;
     //If playerTurn = 0;
     if(playerTurn == 0){
-        //Update Player Turn Banner
+        // TODO Update Player Turn Banner
         //Player 1 Turn
-        //Remove PlayerGuess number of tokens
-        //Update how many were removed notification
+        // TODO Remove PlayerGuess number of tokens from the game board
+        // TODO Update how many were removed notification
         playerTurn = 1;
         logicTurn = false;
     }
     //If playerTurn = 1;
     else{
-        //Update Player Turn Banner
-        //If isCPUGame run cpu turn;
+        // TODO Update Player Turn Banner
+
+        //CPU Turn or Player 2 turn
         if(isCPUGame){
-            //Do CPU Turn
-            //Switch for difficulty
             playerTurn = 0;
             switch(difficulty){
                 case "Easy":
@@ -36,19 +51,15 @@ function turnLogic(){
                     playerGuess = hardCPUTurn(playerGuess);
                     break;
             }
-
         }
         else{
             //else Player 2 turn;
-            //Remove PlayerGuess number of tokens
-            //Update how many were removed notification
+            // TODO Remove PlayerGuess number of tokens from the game board
+            // TODO Update how many were removed notification
             playerTurn = 0;
         }
     }
-    
-
 }
-
 
 function easyCPUTurn(){
     //Make a random num between 1 and 3
