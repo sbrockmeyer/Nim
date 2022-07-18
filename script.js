@@ -6,9 +6,14 @@ var playerGuess = 0;
 var isCPUGame = false;
 //This changes the difficulty of the cpu (can be used for more)
 var difficulty = "Easy";
-
-var player1Name = "";
-var player2Name = "";
+const listOfTokens = [
+    "nim1", "nim2", "nim3", "nim4",
+    "nim5", "nim6", "nim7", "nim8",
+    "nim9", "nim10", "nim11", "nim12",
+    "nim13", "nim14", "nim15", "nim16",
+];
+var player1Name;
+var player2Name;
 
 
 function gameOpponentPVP(){
@@ -63,7 +68,6 @@ function startGame(){
 }
 
 //Use this for when the player chooses the number of pieces to remove
-//Can be changed to just pull the value of the text box or whatever element we use
 function playerPieceSelection(playerChoice){
     var btn1 = document.getElementById("btn1");
     var btn2 = document.getElementById("btn2");
@@ -92,10 +96,18 @@ function playerPieceSelection(playerChoice){
 }
 
 function endTurn(){
-
+    turnLogic();
 }
 
-//Player vs Player logic
+function removeTokensFromBoard(){
+    var temp = 0;
+        while(temp != playerGuess){
+            var token = listOfTokens.pop();
+            document.getElementById(token).style.visibility = "hidden";
+            temp += 1;
+        }
+}
+
 //Turn Logic
 function turnLogic(){
     var playerTurnElem = document.getElementById("playerTurn");
@@ -107,9 +119,14 @@ function turnLogic(){
         playerTurnElem.innerHTML = "Player 1 Turn";
         //Player 1 Turn
         // TODO Remove PlayerGuess number of tokens from the game board
-        
+        if(listOfTokens.length-1 <= 1){
+            document.getElementById("playerTurn").innerHTML = "PLAYER 1 WINS";
+        }
+        else{
+            removeTokensFromBoard();
+        }
         // TODO Update how many were removed notification
-        tokensRemoved.innerHTML = "Player 1 removed:" + playerGuess + " tokens";
+        tokensRemoved.innerHTML = "Player 1 removed: " + playerGuess + " tokens";
         playerTurn = 1;
         logicTurn = false;
     }
@@ -132,14 +149,26 @@ function turnLogic(){
                     playerGuess = hardCPUTurn(playerGuess);
                     break;
             }
-            tokensRemoved.innerHTML = "CPU removed:" + playerGuess + " tokens";
+            if(listOfTokens.length-1 <= 1){
+                document.getElementById("playerTurn").innerHTML = "CPU WINS";
+            }
+            else{
+                removeTokensFromBoard();
+            }
+            tokensRemoved.innerHTML = "CPU removed: " + playerGuess + " tokens";
         }
         else{
             //else Player 2 turn;
             playerTurnElem.innerHTML = "Player 2 Turn";
             // TODO Remove PlayerGuess number of tokens from the game board
+            if(listOfTokens.length-1 <= 1){
+                document.getElementById("playerTurn").innerHTML = "PLAYER 2 WINS";
+            }
+            else{
+                removeTokensFromBoard();
+            }
             // TODO Update how many were removed notification
-            tokensRemoved.innerHTML = "Player 2 removed:" + playerGuess + " tokens";
+            tokensRemoved.innerHTML = "Player 2 removed: " + playerGuess + " tokens";
             playerTurn = 0;
         }
     }
