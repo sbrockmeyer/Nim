@@ -64,29 +64,29 @@ function startGame(){
 
 //Use this for when the player chooses the number of pieces to remove
 //Can be changed to just pull the value of the text box or whatever element we use
-function playerPieceSelection(){
+function playerPieceSelection(playerChoice){
     var btn1 = document.getElementById("btn1");
     var btn2 = document.getElementById("btn2");
     var btn3 = document.getElementById("btn3");
 
-    switch(diff){
+    switch(playerChoice){
         case 1:
             btn1.style.backgroundColor = 'khaki';
             btn2.style.backgroundColor = 'white';
             btn3.style.backgroundColor = 'white';
-            playerGuess = 1;
+            playerGuess = playerChoice;
             break;
         case 2:
             btn1.style.backgroundColor = 'white';
             btn2.style.backgroundColor = 'khaki';
             btn3.style.backgroundColor = 'white';
-            playerGuess = 2;
+            playerGuess = playerChoice;
             break;
         case 3:
             btn1.style.backgroundColor = 'white';
             btn2.style.backgroundColor = 'white';
             btn3.style.backgroundColor = 'khaki';
-            playerGuess = 3;
+            playerGuess = playerChoice;
             break;
     }
 }
