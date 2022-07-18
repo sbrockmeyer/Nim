@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Game of NIM</title>
 </head>
 <body>
     <table>
@@ -15,7 +16,7 @@
                 Rules
             </th>
             <th>
-                Player vs Player
+                Player Selection
             </th>
             
         </tr>
@@ -28,23 +29,27 @@
                 </p>
             </td>
             <td>
+                <button class="button dif" id="btnPVP" onclick="gameOpponentPVP(true)">Player Versus Player</button>
+                <button class="button dif" id="btnCPU" onclick="gameOpponentCPU(false)">Player Versus CPU</button>
+                <br>
+                <br>
                 <label for="player1">Player 1</label>
-                <input type="text" class="playerBox" name="player1">
+                <input type="text" class="playerBox" id="playerName1" name="player1">
                 <br>
                 <label>Player 2</label>
-                <input type="text" class="playerBox" id="player2">
+                <input type="text" class="playerBox" id="playerName2" name="player2">
                 <br>
-                <button class="button">Play</button>
+                <button class="button" onclick="startGame()">Play</button>
             </td>
         </tr>
         <tr>
-            <th colspan="2">Player vs Computer</th>
+            <th colspan="2">Difficulty Selection</th>
         </tr>
         <tr class="dif">
             <td  colspan="2"> 
-                <button class="button dif">Easy</button>
-                <button class="button dif">Medium</button>
-                <button class="button dif">Hard</button>
+                <button class="button dif" id="btnEasy" onclick="gameDifficulty(1)">Easy</button>
+                <button class="button dif" id="btnMed" onclick="gameDifficulty(2)">Medium</button>
+                <button class="button dif" id="btnHard" onclick="gameDifficulty(3)">Hard</button>
             </td>
             
         </tr>

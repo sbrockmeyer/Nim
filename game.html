@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <title>Game of NIM</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th >
+                <label id="playerTurn">Player 1 Turn</label>
+            </th>            
+        </tr>
+            <th >
+                <label id="removedBanner">Player removed: </label>
+            </th>
+        <tr >
+        </tr>
+        <tr>
+            <td><img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim1">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim2">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim3">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim4">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim5">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim6">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim7">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim8">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim9">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim10">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim11">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim12">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim13">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim14">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim15">
+            <img src="images/chipRedWhite_border.png" alt="nimtoken" id="nim16"></td>
+        </tr>
+        <tr class="dif">
+            <td  colspan="2"> 
+                <button class="button dif" id="btn1" onclick="playerPieceSelection()">1</button>
+                <button class="button dif" id="btn2" onclick="playerPieceSelection()">2</button>
+                <button class="button dif" id="btn3" onclick="playerPieceSelection()">3</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="button dif" id="btnEndTurn" onclick="endTurn()">End Turn</button>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
